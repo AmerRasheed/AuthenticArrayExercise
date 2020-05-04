@@ -14,14 +14,20 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-/*
+        System.out.println( "Array Exercise" );
+//Create two arrays with arbitrary size and fill one with random numbers. Then copy over the numbers from the array with random numbers
+// so that the even numbers are located in the rear (the right side) part of the array and
+// the odd numbers are located in the front part (the left side).
+
+
+
 //Write a program which will print the diagonal elements of twodimensional array.  Expected output: 1 4 9
+        System.out.println("Solution 12. Write a program which will print the diagonal elements of twodimensional array.");
         int[] printDiagonal = new int[11];
         for(int i=1;i<4;i++)
         {
             System.out.print("\n");
-             for(int j=1;j<4;j++)
+            for(int j=1;j<4;j++)
                 System.out.print(printDiagonal[j]+ i*j+"   ");                    // For identing purpose in the output
         }
         System.out.println("\n");
@@ -30,7 +36,7 @@ public class App
         {
             for(int j=1;j<4;j++) {
                 if(i==j)
-                System.out.print(printDiagonal[j] + i * j + "   ");                    // For identing purpose in the output
+                    System.out.print(printDiagonal[j] + i * j + "   ");                    // For identing purpose in the output
 
             }
         }
@@ -38,53 +44,118 @@ public class App
 
 
 
-               System.out.println("\n");
+        System.out.println("\n");
 
+
+        //Write a program that ask the user for an integer and repeat that question until user give you a specific value
+// that user already has been told about as a message in your program. Store these values in an array and print that array.
+// After that reverse the array elements so that the first element becomes the last element, the second element becomes the second to last element, etc.
+// Do not just reverse the order in which they are printed. You need to change the way they are stored in the array
+        System.out.println("Solution 11. Write a program that ask the user for an integer and repeat that question until user give you a specific value that user already has been told about as a message in your program. Store these values in an array and print that array. After that reverse the array elements so that the first element becomes the last element, the second element becomes the second to last element, etc. Do not just reverse the order in which they are printed. You need to change the way they are stored in the array.  \n" +               " ");
         Scanner sc= new Scanner(System.in);
         int newlength=0;
         System.out.println("How many elements you want to store in an array");
         newlength=sc.nextInt();
 
         int[] newarray = new int[newlength];
-
+        int[] newarray1 = new int[newlength];
         for(int i=0;i<newlength;i++)
             newarray[i]=sc.nextInt();
         System.out.print("The elements you entered are ");
 
         for(int i=0;i<newlength;i++)                                                  //The number of elements are display :: 11 23 39
             System.out.print(newarray[i]+ " ");
+        System.out.println("\n");
+        int num=newlength;
+        System.out.println("Reverse is \n");
+        for(int i=0;i < newlength;i++)
+        {
+           num--;
+           newarray1[i]=newarray[num];
+           System.out.print(newarray1[i]+" ");
+        }
 
-        System.out.println("Enter the element to add");
-        int newelement=sc.nextInt();
-        int[] newarray1=CallClass.add(newarray,newelement);
-
-        for(int i=0;i<newlength+1;i++)                                                  //The number of elements are display :: 11 23 39
-            System.out.print(newarray1[i]+ " ");
-
+        System.out.println("\n");
 //Write a program which will represent multiplication table stored in multidimensional array.
 // Hint: You have two-dimensional array with values  [[1,2,3,4,5,6,7,8,9,10], [1,2,3,4,5,6,7,8,9,10]]
+
+        System.out.println("Solution 10. Write a program which will represent multiplication table stored in multidimensional array.  \n");
+        System.out.println("Output of a program which will represent multiplication table stored in multidimensional array.");
+        int[] adimension= new int[11];
+        for(int i=1;i<11;i++)
+        {
+            System.out.print("\n");
+            for(int j=1;j<11;j++)
+                if((i*j)<10)
+                    System.out.print(adimension[j]+ i*j+"   ");                    // For identing purpose in the output
+                else                                                               // Two spaces for single digits and single space for double digit
+                    System.out.print(adimension[j]+ i*j+"  ");
+        }
         System.out.println("\n");
-System.out.println("Output of a program which will represent multiplication table stored in multidimensional array.");
-         int[] adimension= new int[11];
-           for(int i=1;i<11;i++)
+
+
+//Write a method which will add elements in an array.
+//Remember that arrays are fixed in size so you need to come up with a solution to “expand” the array.
+        System.out.println("Solution 9. Write a method which will add elements in an array.  Remember that arrays are fixed in size so you need to come up with a solution to “expand” the array");
+        Scanner sc3= new Scanner(System.in);
+        int newlength5=0;
+        System.out.println("How many elements you want to store in an array");
+        newlength5=sc3.nextInt();
+
+        int[] newarray3 = new int[newlength5];
+       // int[] newarray5 = new int[0];
+
+        for(int i=0;i<newlength5;i++)
+            newarray3[i]=sc3.nextInt();
+        System.out.print("The elements you entered are ");
+
+        for(int i=0;i<newlength5;i++)                                                  //The number of elements are display :: 11 23 39
+            System.out.print(newarray3[i]+ " ");
+
+        System.out.println("Enter the element to add");
+        int newelement=sc3.nextInt();
+        int[] newarray5=CallClass.add(newarray3,newelement);
+
+        for(int i=0;i<newlength5+1;i++)                                                  //The number of elements are display :: 11 23 39 + Additional elements added
+            System.out.print(newarray5[i]+ " ");
+
+/*
+
+//Write a program which will remove the duplicate elements of a given array [20, 20, 40, 20, 30, 40, 50, 60, 50].
+// Expected output:                 Array: 20 20 40 20 30 40 50 60 50
+// Array without duplicate values: 20 40 30 50 60
+
+        System.out.println("Solution 8. Write a program which will remove the duplicate elements of a given array [20, 20, 40, 20, 30, 40, 50, 60, 50]");
+        int[] givenarr = {20, 20, 40,20, 30, 20, 50, 60, 50};
+        int compare;
+        for(int i=0;i<9;i++) {
+            int engång=0;
+
+            for (int j = 0; j < 8; j++)
             {
-                System.out.print("\n");
-                  for(int j=1;j<11;j++)
-                    if((i*j)<10)
-                        System.out.print(adimension[j]+ i*j+"   ");                    // For identing purpose in the output
-                    else                                                               // Two spaces for single digits and single space for double digit
-                        System.out.print(adimension[j]+ i*j+"  ");
-            }
-            System.out.println("\n");
+                compare = givenarr[i];
+                if (compare == givenarr[j + 1])
+                {
+                    if(engång<1)
+                        givenarr[j + 1] = givenarr[i];
+                    else
+                        givenarr[j+1]=0;
+                    engång++;
+                }
+
+            } //inner loop
+        }//outer loop
+        System.out.println(Arrays.toString(givenarr));
+        System.out.print("The non-duplicate elements are : ");
+        for(int i=0;i<givenarr.length;i++)
+            if(givenarr[i]!=0)
+                System.out.print(givenarr[i]+ " ");
 
 
-        //Write a method which will add elements in an array.
-        // Remember that arrays are fixed in size so you need to come up with a solution to “expand” the array.
 
 
-               System.out.println( "Array exercise FIRST EIGHT QUESTIONS SOLUTION" );
 //Write a program which will store elements in an array of type ‘int’ and print it out.  Expected output: 11 23 39 etc.
-                Scanner sc= new Scanner(System.in);
+              //  Scanner sc1= new Scanner(System.in);
                 int length=0;
                 System.out.println("How many elements you want to store in an array");
                 length=sc.nextInt();
@@ -206,35 +277,7 @@ System.out.println("Output of a program which will represent multiplication tabl
                 System.out.println("\n");
                 System.out.println("\n");
 
-//Write a program which will remove the duplicate elements of a given array [20, 20, 40, 20, 30, 40, 50, 60, 50].
-// Expected output:                 Array: 20 20 40 20 30 40 50 60 50
-// Array without duplicate values: 20 40 30 50 60
-                int[] givenarr = {20, 20, 40,20, 30, 20, 50, 60, 50};
-                int compare;
-                for(int i=0;i<9;i++) {
-                    int engång=0;
-
-                    for (int j = 0; j < 8; j++)
-                    {
-                        compare = givenarr[i];
-                        if (compare == givenarr[j + 1])
-                        {
-                            if(engång<1)
-                                givenarr[j + 1] = givenarr[i];
-                            else
-                                givenarr[j+1]=0;
-                            engång++;
-                        }
-
-                    } //inner loop
-                }//outer loop
-                System.out.println(Arrays.toString(givenarr));
-                System.out.print("The non-duplicate elements are : ");
-                for(int i=0;i<givenarr.length;i++)
-                    if(givenarr[i]!=0)
-                        System.out.print(givenarr[i]+ " ");
-
-            */
+*/
     }
         }
 
