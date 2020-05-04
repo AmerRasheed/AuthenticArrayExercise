@@ -2,7 +2,10 @@ package org.example;
 
 import com.sun.deploy.security.SelectableSecurityManager;
 
-    public class CallClass {
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class CallClass {
 
         public static int indexOf(int[] a, int b){
 
@@ -17,6 +20,13 @@ import com.sun.deploy.security.SelectableSecurityManager;
                 else flag=true;
             }
             return -1;
+        }
+
+        public static int[] add(int[] source, int toAdd){
+
+            int[] anarray = Arrays.copyOf(source,source.length+1);
+            anarray[anarray.length-1]=toAdd;
+            return anarray;
         }
 /*
 public static int addelement()

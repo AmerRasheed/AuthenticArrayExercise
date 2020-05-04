@@ -15,7 +15,74 @@ public class App
     public static void main( String[] args )
     {
         System.out.println( "Hello World!" );
-/*               System.out.println( "Array exercise FIRST EIGHT QUESTIONS SOLUTION" );
+/*
+//Write a program which will print the diagonal elements of twodimensional array.  Expected output: 1 4 9
+        int[] printDiagonal = new int[11];
+        for(int i=1;i<4;i++)
+        {
+            System.out.print("\n");
+             for(int j=1;j<4;j++)
+                System.out.print(printDiagonal[j]+ i*j+"   ");                    // For identing purpose in the output
+        }
+        System.out.println("\n");
+        System.out.println("The diagonal elements are ");
+        for(int i=1;i<4;i++)
+        {
+            for(int j=1;j<4;j++) {
+                if(i==j)
+                System.out.print(printDiagonal[j] + i * j + "   ");                    // For identing purpose in the output
+
+            }
+        }
+        System.out.println("\n");
+
+
+
+               System.out.println("\n");
+
+        Scanner sc= new Scanner(System.in);
+        int newlength=0;
+        System.out.println("How many elements you want to store in an array");
+        newlength=sc.nextInt();
+
+        int[] newarray = new int[newlength];
+
+        for(int i=0;i<newlength;i++)
+            newarray[i]=sc.nextInt();
+        System.out.print("The elements you entered are ");
+
+        for(int i=0;i<newlength;i++)                                                  //The number of elements are display :: 11 23 39
+            System.out.print(newarray[i]+ " ");
+
+        System.out.println("Enter the element to add");
+        int newelement=sc.nextInt();
+        int[] newarray1=CallClass.add(newarray,newelement);
+
+        for(int i=0;i<newlength+1;i++)                                                  //The number of elements are display :: 11 23 39
+            System.out.print(newarray1[i]+ " ");
+
+//Write a program which will represent multiplication table stored in multidimensional array.
+// Hint: You have two-dimensional array with values  [[1,2,3,4,5,6,7,8,9,10], [1,2,3,4,5,6,7,8,9,10]]
+        System.out.println("\n");
+System.out.println("Output of a program which will represent multiplication table stored in multidimensional array.");
+         int[] adimension= new int[11];
+           for(int i=1;i<11;i++)
+            {
+                System.out.print("\n");
+                  for(int j=1;j<11;j++)
+                    if((i*j)<10)
+                        System.out.print(adimension[j]+ i*j+"   ");                    // For identing purpose in the output
+                    else                                                               // Two spaces for single digits and single space for double digit
+                        System.out.print(adimension[j]+ i*j+"  ");
+            }
+            System.out.println("\n");
+
+
+        //Write a method which will add elements in an array.
+        // Remember that arrays are fixed in size so you need to come up with a solution to “expand” the array.
+
+
+               System.out.println( "Array exercise FIRST EIGHT QUESTIONS SOLUTION" );
 //Write a program which will store elements in an array of type ‘int’ and print it out.  Expected output: 11 23 39 etc.
                 Scanner sc= new Scanner(System.in);
                 int length=0;
@@ -30,8 +97,8 @@ public class App
                 for(int i=0;i<length;i++)                                                  //The number of elements are display :: 11 23 39
                     System.out.print(firstarray[i]+ " ");
 
-                // Create a program and create a method with name ‘indexOf’ which will find and return the index of an element in the array.
-                // If the element doesn’t exist your method should return -1 as value.  Expected output: Index position of number 5 is: 2
+// Create a program and create a method with name ‘indexOf’ which will find and return the index of an element in the array.
+// If the element doesn’t exist your method should return -1 as value.  Expected output: Index position of number 5 is: 2
 
                 int[] secondarray = new int[] {11,22,33,44,55};
                 System.out.println("Given the array [11,22,33,44,55]");                          //Given array            [11,  22, 33,  44,  55]
